@@ -1,0 +1,1027 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Styles for the fixed announcement bar */
+.announcement-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    /* Change background to black */
+    color: #ff8c00;
+    /* Change text to white */
+    text-align: center;
+    padding: 10px;
+    font-family: 'Aktiv Grotesk', sans-serif;
+    z-index: 1000;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.441);
+}
+
+.announcement-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll 50s linear infinite;
+}
+
+.announcement-content p {
+    color: #ff8b16;
+    /* Ensure text is white */
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    padding: 0 2em;
+    text-transform: uppercase;
+}
+
+/* Keyframes for scrolling text */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Adjusting the body padding to avoid content hidden behind the announcement bar */
+body {
+    padding-top: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Navigation links styling */
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navlinks a {
+    color: hsla(196, 100%, 52%, 0.969);
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 9.75px 13px;
+}
+
+.navlinks a:hover {
+    color: #ff8c00;
+    transition: color 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #000000;
+    z-index: 999;
+}
+
+.imageholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageholder img {
+    width: 100px;
+    padding-bottom: 15px;
+}
+
+.material-icons {
+    size: 15px;
+    color: grey;
+    margin-right: 20px;
+}
+
+.men {
+    size: 100px;
+}
+
+#footer {
+    background-color: #000;
+    color: #fff;
+    font-family: "aw-conqueror-inline";
+    width: 100%;
+    min-height: 80vh;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 34px;
+}
+
+.nav-wrapper {
+    margin-bottom: 20px;
+}
+
+.back-to-top-nav .back-to-top a {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    /* Change text to white */
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.back-to-top a:hover {
+    color: #00e1ff;
+}
+
+#secondaryNavWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#secondaryNavigation .external,
+#secondaryNavigation .collection {
+    margin-bottom: 20px;
+}
+
+#secondaryNavigation a {
+    color: #fff;
+    /* Change text to white */
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+#siteInfo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.site-address {
+    padding-right: 10px;
+}
+
+.site-email {
+    text-decoration: none;
+    color: #fff;
+    /* Change text to white */
+}
+
+.footer-content {
+    text-align: center;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 10px;
+    color: #fff;
+    /* Ensure text is white */
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon:hover {
+    opacity: 50%;
+}
+
+.social-icon svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    /* Change icon color to white */
+}
+
+
+.search-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #fff;
+    /* Change border to white */
+    width: calc(100% - 40px);
+    /* Ensure there's some padding on the sides */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* Needed for absolute positioning of the icon */
+}
+
+.search-input {
+    width: 100%;
+    padding: 12 12 12 45px;
+    /* Add padding to make space for the icon */
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+    color: #fff;
+    /* Change text to white */
+}
+
+
+/* Hero Section Styles */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section without distortion */
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+    z-index: 2; /* Ensure it appears above the image but below the content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3; /* Content appears above the overlay */
+    text-align: left; /* Align text to the left */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Center items vertically */
+    height: 100%;
+    padding: 20px; /* Padding to keep content from touching the edges */
+    max-width: 50%; /* Limit the width of content */
+}
+
+.hero-content h1 {
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better text visibility */
+}
+
+.hero-content p {
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better text visibility */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Uniform padding */
+    font-size: 16px;
+    font-family: "Oswald", sans-serif; /* Ensure the font is properly applied */
+    background-color: #ffffff; /* Button color */
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; /* Center text inside the button */
+    width: 200px; /* Fixed width for all buttons */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+
+
+.cta-button:hover {
+    background-color: #ff4500; /* Darker shade on hover */
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 600px) {
+    .hero-section {
+        height: 50vh; /* Adjust the height for mobile devices */
+    }
+    
+    .hero-image {
+        object-fit: cover; /* Keep the image covering the section */
+        height: 100%; /* Ensure the image still covers the entire section */
+    }
+    
+    .hero-content {
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem; /* Decrease font size for better readability on small screens */
+    }
+    
+    .hero-content p {
+        font-size: 1rem; /* Decrease font size for better readability on small screens */
+    }
+    
+    .cta-button {
+        padding: 8px 16px; /* Decrease button padding for mobile devices */
+        font-size: 0.875rem; /* Decrease button text size */
+        width: auto; /* Allow the button to adjust its width automatically */
+    }
+}
+/* About Us Section */
+.about-us-section {
+    padding: 40px 40px; /* Add more padding on the sides */
+    background-color: #ffffff; /* Light background color for contrast */
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 40px; /* Center the section and add margin */
+    max-width: 1200px; /* Restrict maximum width */
+    
+}
+
+
+.about-us-content {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out the text and image containers */
+    gap: 20px; /* Space between text and image */
+}
+
+.text-container {
+    flex: 1; /* Allow the text container to take up available space */
+    max-width: 60%; /* Control width */
+}
+
+.text-container h2 {
+    font-size: 2.5rem; /* Larger font size for the header */
+    color: #333; /* Dark color for better readability */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.text-container p {
+    font-size: 1.125rem; /* Slightly larger font size for paragraphs */
+    color: rgb(164, 63, 0); /* Light gray color for text */
+    line-height: 1.6; /* Increased line height for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+
+.cta-button-about {
+    display: inline-block;
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Uniform padding */
+    font-size: 16px;
+    font-family: "Oswald", sans-serif; /* Ensure the font is properly applied */
+    background-color: #000000; /* Button color */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; /* Center text inside the button */
+    width: 200px; /* Fixed width for all buttons */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.cta-button-about:hover {
+    background-color: #a8a8a8; /* Darker orange for hover effect */
+}
+
+.image-container {
+    flex: 1; /* Allow the image container to take up available space */
+    text-align: center; /* Center the image within the container */
+    overflow: hidden; /* Ensure that overflow is hidden */
+    border-radius: 10px; /* Rounded corners for the image container */
+}
+
+.image-container img {
+    width: 100%; /* Full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transitions */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    filter: brightness(1.1); /* Slightly brighten the image on hover */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .about-us-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .text-container {
+        max-width: 100%; /* Full width for text container */
+        text-align: center; /* Center text in mobile view */
+    }
+
+    .image-container {
+        max-width: 100%; /* Full width for image container */
+    }
+}
+
+
+
+
+
+
+/* Experiences Section */
+.experiences-section {
+    padding: 40px 20px;
+    background-color: #000000;
+}
+
+.experiences-content {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.experiences-content p  {
+    color: lightskyblue;
+}
+
+.experiences-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.experience-metrics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.metric {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.metric h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.metric p {
+    font-size: 1.2em;
+}
+
+
+
+
+.search-input svg {
+    padding-right: 20px;
+}
+
+.search-block .search-input::placeholder {
+    color: #fff;
+    padding-left: 25px;
+}
+
+.commitment a {
+    color: #fff;
+    font-family: "oswald", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 11.76px;
+}
+
+.Copyright {
+    font-family: "oswald", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 11.76px;
+    color: #fff;
+}
+
+#secondaryNavigation a:hover {
+    color: #00e1ff;
+    transition: color 0.3s ease;
+}
+
+#legal {
+    padding: 17px;
+    color: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.menu-button {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    top: 20px;
+    left: 1px;
+    right: 5px;
+    bottom: 5px;
+    background: none;
+    border: none;
+    transition: .5s ease-in-out;
+    z-index: 1;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.menu-button span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #12b4ff;
+    border-radius: 9px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+span:nth-child(1) {
+    top: 0;
+}
+
+span:nth-child(2),
+span:nth-child(3) {
+    top: 8px;
+}
+
+span:nth-child(4) {
+    top: 16px;
+}
+
+.menu-button--open span:nth-child(1) {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu-button--open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu-button--open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.menu-button--open span:nth-child(4) {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 120px; /* Adjust this value to the exact header height */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px); /* Adjust this to fill the remaining viewport height */
+    background-color: rgba(0, 0, 0, 0.98); /* White background with higher opacity */
+    z-index: 1000; /* Higher than other elements */
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Set to fully opaque */
+}
+
+
+.nav-overlay.open {
+    display: flex;
+}
+
+.nav a {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 12px 0;
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-weight: 300; /* This sets the font weight to a lighter value */
+}
+
+.nav a:hover{
+    color: #ff8c00;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Styles for the fixed menu button and background */
+.fixed-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    z-index: 2000; /* Ensure it's above other content */
+    display: none;
+    opacity: 1;
+}
+
+.fixed-menu .menu-button {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.mainpage {
+    padding: 40px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cateringtitle{
+    font-size: 23px;
+    font-family: "aw-conqueror-inline";
+}
+
+.cateringimageholder {
+    width: 100%; /* Make the image holder full width */
+    max-width: 800px; /* Set a max-width for larger screens */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cateringimg {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.text-content {
+    font-family: "oswald";
+    font-size: 14px;
+    padding: 14px 0;
+    width: 100%;
+    max-width: 800px; /* Align with image's max-width */
+    text-align: left; /* Align text to the left */
+}
+
+.text-content h2 {
+    margin-top: 0; /* Remove top margin */
+}
+
+.text-content p {
+    margin: 10px 0; /* Adjust paragraph margins */
+}
+
+.text-content button {
+    display: inline-block;
+    margin-top: 20px; /* Add some space above the button */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "oswald";
+    background-color: #000000; /* Example button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.text-content button:hover {
+    opacity: 80%;
+}
+
+
+
+
+
+.thin-hr {
+    border: 0;
+    height: 1px; /* Thickness of the line */
+    background: #ccc; /* Color of the line */
+    width: 80%; /* Set the width to 80% */
+    margin: 20px auto; /* Center the line and adjust the margin as needed */
+}
+
+.thin-hr-container {
+    padding: 20px 0; /* Add 20px of padding above and below */
+    display: flex;
+    justify-content: center;
+}
+
+/* Center the form on the page */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.looper{
+    display: flex;
+    justify-content: center;
+}
+
+.field-list {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Style the fieldset and legend */
+.name-fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.name-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: grey;
+}
+
+.description {
+    font-size: 12px;
+    color: grey;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Style the fields */
+.field {
+    margin-bottom: 20px;
+}
+
+.caption-wrapper {
+    margin-bottom: 5px;
+}
+
+.caption-text {
+    font-size: 14px;
+    color: grey;
+    font-family: 'Oswald', sans-serif;
+}
+
+.input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.input-date-wrapper {
+    position: relative;
+}
+
+.input-date {
+    width: calc(100% - 20px);
+    padding-right: 40px;
+}
+
+.calendar-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.form-input-effects {
+    display: none; /* Hide unused elements */
+}
+
+/* Style the submit button */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+/* Layout adjustments */
+.field.first-name,
+.field.last-name {
+    display: inline-block;
+    width: calc(50% - 10px);
+}
+
+.field.first-name {
+    margin-right: 20px;
+}
+
+.input-text::placeholder {
+    color: #000;
+}
+
+.caption-text .description {
+    color: #a0a0a0;
+}
+
+.button-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title-text {
+    padding-bottom: 10px;
+}
+
+.field-names {
+    padding-right: 10px;
+}
+
+hr {
+    border: none; /* Remove the default border */
+    height: 4px; /* Adjust the thickness as needed */
+    background-color: orange; /* Set the color to orange */
+    border-radius: 5px; /* Adjust the radius for rounded edges */
+}
+
+
+@media (max-width: 600px) {
+    .field.first-name,
+    .field.last-name {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .field.first-name {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+
+    /* CSS for centering the logo and fixing the SVG to the left of the header */
+    .header {
+        display: block;
+    }
+
+    .headerdiv {
+        display: flex;
+        flex-direction: column;
+        padding: 9px 0;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    .imageholder img {
+        width: 60px;
+        padding-bottom: 2px;
+        text-align: center;
+    }
+
+    #secondaryNavWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #secondaryNavigation .external,
+    #secondaryNavigation .collection {
+        margin-bottom: 10px;
+    }
+
+    /* Show "Back to Top" link */
+    .back-to-top {
+        display: inline;
+    }
+
+    .hero-section {
+        height: 50vh; /* Adjust the height for mobile devices */
+    }
+    
+    .hero-image {
+        object-fit: cover; /* Keep the image covering the section */
+        height: 100%; /* Ensure the image still covers the entire section */
+    }
+    
+    .hero-content {
+        padding: 20px; /* Add some padding for better spacing */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem; /* Slightly larger font size */
+    }
+    
+    .hero-content p {
+        font-size: 1.3rem; /* Adjust font size for readability */
+    }
+    
+    .cta-button {
+        padding: 12px 24px; /* Adjust button padding */
+        font-size: 1.1rem; /* Adjust button text size */
+        width: 150px; /* Adjust width for mobile devices if needed */
+    }
+}
+
+
+
+@media (min-width: 769px) {
+    .fixed-menu {
+        position: relative;
+        display: none;
+    }
+    .navlinks {
+        display: flex;
+    }
+
+    .nav-overlay {
+        display: none;
+    }
+
+    .header {
+        padding-top: 20px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    #secondaryNavWrapper {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #secondaryNavigation {
+        display: flex;
+    }
+
+    #secondaryNavigation a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    /* Hide "Back to Top" link */
+    .back-to-top {
+        display: none;
+    }
+}
